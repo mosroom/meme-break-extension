@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+    body {
+      width: 280px;
+      padding: 16px;
+      margin: 0;
+      font-family: 'Press Start 2P', 'Courier New', monospace;
+      background: #ffff00;
+      color: #000;
+      border: 4px solid #000;
+      box-shadow: 4px 4px 0px #000;
+      font-size: 8px;
+      line-height: 1.6;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 16px;
+      padding: 12px;
+      background: #000;
+      color: #ffff00;
+      border: 2px solid #000;
+      position: relative;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: #ffff00;
+      z-index: -1;
+    }
+
+    .header h1 {
+      margin: 0 0 8px 0;
+      font-size: 12px;
+      text-shadow: 2px 2px 0px #ffff00;
+    }
+
+    .header p {
+      margin: 0;
+      font-size: 6px;
+      opacity: 0.9;
+    }
+
+    .control-group {
+      margin-bottom: 16px;
+      padding: 8px;
+      background: #d3d3d3;
+      border: 2px solid #000;
+      box-shadow: inset 2px 2px 0px #fff, inset -2px -2px 0px #888;
+    }
+
+    .control-group label {
+      display: block;
+      font-size: 8px;
+      margin-bottom: 8px;
+      font-weight: normal;
+      color: #000;
+    }
+
+    select {
+      width: 100%;
+      padding: 8px;
+      border: 2px solid #000;
+      font-family: 'Press Start 2P', 'Courier New', monospace;
+      font-size: 8px;
+      background: #fff;
+      color: #000;
+      box-shadow: inset 2px 2px 0px #888;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+
+    select:focus {
+      outline: 2px solid #ffff00;
+      outline-offset: 2px;
+    }
+
+    .toggle-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      padding: 8px;
+      background: #d3d3d3;
+      border: 2px solid #000;
+      box-shadow: inset 2px 2px 0px #fff, inset -2px -2px 0px #888;
+    }
+
+    .toggle-container label {
+      font-size: 8px;
+      color: #000;
+    }
+
+    .toggle-switch {
+      position: relative;
+      width: 40px;
+      height: 20px;
+      background: #888;
+      border: 2px solid #000;
+      cursor: pointer;
+      transition: none;
+    }
+
+    .toggle-switch.active {
+      background: #ffff00;
+    }
+
+    .toggle-slider {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 12px;
+      height: 12px;
+      background: #fff;
+      border: 1px solid #000;
+      transition: none;
+    }
+
+    .toggle-switch.active .toggle-slider {
+      transform: translateX(18px);
+      background: #000;
+    }
+
+    .status {
+      text-align: center;
+      font-size: 8px;
+      padding: 8px;
+      border: 2px solid #000;
+      margin-top: 12px;
+    }
+
+    .status.active {
+      background: #000;
+      color: #ffff00;
+      box-shadow: 2px 2px 0px #000;
+    }
+
+    .status.inactive {
+      background: #888;
+      color: #fff;
+      box-shadow: inset 2px 2px 0px #000;
+    }
+
+    .info {
+      font-size: 6px;
+      text-align: center;
+      margin-top: 12px;
+      padding: 8px;
+      background: #fff;
+      border: 2px solid #000;
+      line-height: 1.4;
+      box-shadow: inset 1px 1px 0px #888;
+    }
+
+    /* Pixelated effects */
+    * {
+      image-rendering: -moz-crisp-edges;
+      image-rendering: -webkit-crisp-edges;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+    }
+
+    /* Custom scrollbar for select */
+    select::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    select::-webkit-scrollbar-track {
+      background: #d3d3d3;
+      border: 1px solid #000;
+    }
+
+    select::-webkit-scrollbar-thumb {
+      background: #888;
+      border: 1px solid #000;
+    }
+
+    select::-webkit-scrollbar-thumb:hover {
+      background: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>☕ MEME BREAK</h1>
+    <p>TAKE A BREAK!</p>
+  </div>
+
+  <div class="control-group">
+    <label for="interval">SHOW MEMES EVERY:</label>
+    <select id="interval">
+      <option value="15">15 MINUTES</option>
+      <option value="30" selected>30 MINUTES</option>
+      <option value="60">1 HOUR</option>
+      <option value="120">2 HOURS</option>
+    </select>
+  </div>
+
+  <div class="toggle-container">
+    <label>ENABLE POPUPS:</label>
+    <div class="toggle-switch" id="toggleSwitch">
+      <div class="toggle-slider"></div>
+    </div>
+  </div>
+
+  <div class="status" id="status">
+    MEME BREAKS DISABLED
+  </div>
+
+  <div class="info">
+    MEMES APPEAR AS PIXEL POPUPS IN BROWSER TABS. CLICK X TO CLOSE!
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
