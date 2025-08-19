@@ -1,6 +1,6 @@
 # 🎭 Meme Break - Chrome Extension
 
-![Meme Break Banner](https://github.com/mosroom/meme-break/blob/main/assets/MemeBreakBanner.png)
+![Meme Break Banner](https://github.com/mosroom/meme-break-extension/blob/main/assets/MemeBreakBanner.png)
 
 > Stay entertained while you work with periodic meme popups!
 
@@ -23,14 +23,14 @@
 ## 📱 Screenshots
 
 ### Extension Popup
-![Extension Popup1](https://github.com/mosroom/meme-break/blob/main/assets/Popup1.png)
+![Extension Popup1](https://github.com/mosroom/meme-break-extension/blob/main/assets/Popup1.png)
 
-![Extension Popup2](https://github.com/mosroom/meme-break/blob/main/assets/Popup2.png)
+![Extension Popup2](https://github.com/mosroom/meme-break-extension/blob/main/assets/Popup2.png)
 
 *Configure your meme break settings with our sleek popup interface*
 
 ### Meme Display
-![Meme Display](https://github.com/mosroom/meme-break/blob/main/assets/MemePopup.png)
+![Meme Display](https://github.com/mosroom/meme-break-extension/blob/main/assets/MemePopup.png)
 
 ## 🚀 Installation
 
@@ -69,7 +69,7 @@ When a meme appears:
 
 ## 📄 License
 
-[GPLv3](https://github.com/mosroom/meme-break/blob/main/LICENSE)
+[MIT License](https://github.com/mosroom/meme-break-extension/blob/main/LICENSE)
 
 ## 🔒 Privacy
 
