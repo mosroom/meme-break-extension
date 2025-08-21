@@ -12,7 +12,7 @@
 
 ## ✨ Features
 
-- 🎯 **Scheduled Meme Delivery**: Get memes every 30 minutes, 1 hour, or 2 hours
+- 🎯 **Scheduled Meme Delivery**: Get memes every 15 minutes, 30 minutes, 1 hour, or 2 hours
 - 🎨 **Beautiful Popups**: Sleek design with smooth animations
 - ⏱️ **Auto-Dismiss**: Popups close automatically after 30 seconds
 - 🎮 **Easy Controls**: Close with X button or Escape key
