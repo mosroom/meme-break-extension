@@ -26,7 +26,7 @@
 #### Background Script (``background.js``)
 
 - Manages Chrome alarms to schedule meme delivery at your chosen intervals
-- Fetches random memes from the [Meme API](https://meme-api.com/gimme)
+- Fetches random memes from the [Meme API](https://github.com/D3vd/Meme_Api)
 - Finds the best active browser tab to display the meme
 - Handles extension startup/shutdown and settings synchronization
 
