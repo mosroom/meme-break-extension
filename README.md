@@ -104,7 +104,4 @@ This extension:
 - ✅ Only fetches memes from public APIs
 - ✅ Stores settings locally in your browser
 - ❌ No tracking, no ads, no nonsense
-
----
-
-Made With ♥ By AI & My Questionable Brainpower :)
+  
