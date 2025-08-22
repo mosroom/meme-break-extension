@@ -23,21 +23,21 @@
 ## 🔧 How It Works
 
 **Meme Break** operates through three main components working together:
-### Background Script (``background.js``)
+#### Background Script (``background.js``)
 
 - Manages Chrome alarms to schedule meme delivery at your chosen intervals
 - Fetches random memes from the [Meme API](https://meme-api.com/gimme)
 - Finds the best active browser tab to display the meme
 - Handles extension startup/shutdown and settings synchronization
 
-### Content Script (``content.js & content.css``)
+#### Content Script (``content.js & content.css``)
 
 - Injected into web pages to display the retro-pixel styled meme popup
 - Creates animated overlays that don't interfere with page functionality
 - Handles user interactions (close button, escape key, auto-dismiss timer)
 - Manages popup lifecycle and cleanup
 
-### Popup Interface (``popup.html & popup.js``)
+#### Popup Interface (``popup.html & popup.js``)
 
 - Provides the extension's settings panel with retro gaming aesthetics
 - Allows users to configure meme intervals and toggle the extension on/off
