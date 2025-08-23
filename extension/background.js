@@ -2,14 +2,14 @@
 const ALARM_NAME = 'memeBreakAlarm';
 const BASE_MEME_API_URL = 'https://meme-api.com/gimme';
 
-// All available subreddits (default + your additions)
+// All available subreddits 
 const SUBREDDITS = [
   // Default subreddits from the API
   'memes',
   'dankmemes', 
   'me_irl',
   
-  // Your additional subreddits
+  // Additional subreddits
   'meme',
   'Memes_Of_The_Dank',
   'funny',
@@ -40,7 +40,7 @@ async function initializeExtension() {
   
   console.log('Loaded settings:', settings);
   
-  // CRITICAL FIX: Auto-start if enabled
+  // Auto-start if enabled
   if (settings.enabled) {
     console.log('Auto-starting meme timer on initialization');
     await startMemeTimer(settings.interval);
@@ -81,7 +81,7 @@ chrome.alarms.onAlarm.addListener(async (alarm) => {
   if (alarm.name === ALARM_NAME) {
     console.log('Meme alarm triggered!');
     
-    // CRITICAL FIX: Check if still enabled before showing meme
+    // Check if still enabled before showing meme
     const { enabled } = await chrome.storage.sync.get('enabled');
     if (enabled) {
       await showMemeInBestTab();
@@ -99,7 +99,7 @@ async function startMemeTimer(intervalMinutes) {
     // Clear any existing alarm
     await chrome.alarms.clear(ALARM_NAME);
     
-    // CRITICAL FIX: Ensure alarm creation is robust
+    // Ensure alarm creation is robust
     await chrome.alarms.create(ALARM_NAME, {
       delayInMinutes: intervalMinutes,
       periodInMinutes: intervalMinutes
@@ -124,7 +124,7 @@ async function stopMemeTimer() {
   }
 }
 
-// IMPROVED: Better tab selection logic
+// Better tab selection logic
 async function showMemeInBestTab() {
   try {
     // Get all tabs in current window
@@ -169,7 +169,7 @@ async function showMemeInBestTab() {
     const meme = await fetchRandomMeme();
     
     if (meme) {
-      // CRITICAL FIX: Ensure content script is injected
+      // Ensure content script is injected
       await ensureContentScriptInjected(targetTab.id);
       
       // Send meme data to content script
@@ -210,7 +210,7 @@ function isValidTabForMeme(tab) {
   return true;
 }
 
-// CRITICAL FIX: Ensure content script is properly injected
+// Ensure content script is properly injected
 async function ensureContentScriptInjected(tabId) {
   try {
     // Try to ping the content script
@@ -243,7 +243,7 @@ async function injectContentScript(tabId) {
   }
 }
 
-// NEW: Function to randomly select a subreddit and fetch meme
+// Function to randomly select a subreddit and fetch meme
 function getRandomSubreddit() {
   const randomIndex = Math.floor(Math.random() * SUBREDDITS.length);
   return SUBREDDITS[randomIndex];
