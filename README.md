@@ -5,6 +5,8 @@
 > Stay entertained while you work with periodic meme popups!
 
 ![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-4285f4?style=for-the-badge&logo=googlechrome&logoColor=white)
+[![Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/mosroom)
+
 
 ## What is Meme Break?
 
