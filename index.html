@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/icon128.png" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Meme Break - Chrome Extension</title>
+  </head>
+  <body>
+    <div id="donate-button">
+      <script
+        type="text/javascript"
+        src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"
+      ></script>
+      <script type="text/javascript">
+        kofiwidget2.init("SUPPORT ME", "#000000", "O5O11G3CXL");
+        kofiwidget2.draw();
+      </script>
+    </div>
+    <div class="container">
+      <header>
+        <h1>Meme Break</h1>
+        <p class="tagline">
+          Stay entertained while you work with periodic meme popups!
+        </p>
+        <div class="header-buttons">
+          <a href="#" class="chrome-badge">Chrome Extension</a>
+          <a
+            href="https://github.com/mosroom/meme-break-extension"
+            target="_blank"
+            class="chrome-badge"
+            >GitHub Repository</a
+          >
+        </div>
+      </header>
+
+      <main class="main-content">
+        <section class="section">
+          <h2>🎭 What is Meme Break?</h2>
+          <p>
+            <strong>Meme Break</strong> is a Chrome extension that shows you
+            random memes at regular intervals to keep you entertained during
+            work sessions. Because who doesn't need a good laugh while grinding
+            through spreadsheets? 😄
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>✨ Features</h2>
+          <div class="features-grid">
+            <div class="feature">
+              <strong>🎯 Scheduled Meme Delivery</strong><br />
+              Get memes every 15 minutes, 30 minutes, 1 hour, or 2 hours
+            </div>
+            <div class="feature">
+              <strong>🎨 Beautiful Popups</strong><br />
+              Sleek design with smooth animations
+            </div>
+            <div class="feature">
+              <strong>⏱️ Auto-Dismiss</strong><br />
+              Popups close automatically after 30 seconds
+            </div>
+            <div class="feature">
+              <strong>🎮 Easy Controls</strong><br />
+              Close with X button or Escape key
+            </div>
+            <div class="feature">
+              <strong>💾 Sync Settings</strong><br />
+              Your preferences save across devices
+            </div>
+            <div class="feature">
+              <strong>📱 Mobile Friendly</strong><br />
+              Works on all screen sizes
+            </div>
+            <div class="feature">
+              <strong>🛡️ Safe Content</strong><br />
+              Only family-friendly memes, no NSFW material
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>🔧 How It Works</h2>
+          <p>
+            <strong>Meme Break</strong> operates through three main components
+            working together:
+          </p>
+
+          <div class="components">
+            <div class="component">
+              <h4>Background Script (background.js)</h4>
+              <ul>
+                <li>
+                  Manages Chrome alarms to schedule meme delivery at your chosen
+                  intervals
+                </li>
+                <li>
+                  Fetches random memes from the
+                  <a href="https://github.com/D3vd/Meme_Api" target="_blank"
+                    >Meme API</a
+                  >
+                </li>
+                <li>Finds the best active browser tab to display the meme</li>
+                <li>
+                  Handles extension startup/shutdown and settings
+                  synchronization
+                </li>
+              </ul>
+            </div>
+
+            <div class="component">
+              <h4>Content Script (content.js & content.css)</h4>
+              <ul>
+                <li>
+                  Injected into web pages to display the retro-pixel styled meme
+                  popup
+                </li>
+                <li>
+                  Creates animated overlays that don't interfere with page
+                  functionality
+                </li>
+                <li>
+                  Handles user interactions (close button, escape key,
+                  auto-dismiss timer)
+                </li>
+                <li>Manages popup lifecycle and cleanup</li>
+              </ul>
+            </div>
+
+            <div class="component">
+              <h4>Popup Interface (popup.html & popup.js)</h4>
+              <ul>
+                <li>
+                  Provides the extension's settings panel with retro gaming
+                  aesthetics
+                </li>
+                <li>
+                  Allows users to configure meme intervals and toggle the
+                  extension on/off
+                </li>
+                <li>
+                  Communicates with the background script to apply settings
+                  changes
+                </li>
+                <li>
+                  Uses Chrome's sync storage to persist settings across devices
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <p>
+            The extension respects user privacy by storing all settings locally
+            and only fetching memes from public APIs without collecting any
+            personal data.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>📱 Screenshots</h2>
+          <div class="screenshots">
+            <div class="screenshot">
+              <h3>Extension Popup</h3>
+              <img src="images/Popup1.png" alt="Extension Popup Settings" />
+              <img src="images/Popup2.png" alt="Extension Popup Interface" />
+              <p>
+                Configure your meme break settings with our sleek popup
+                interface
+              </p>
+            </div>
+            <div class="screenshot">
+              <h3>Meme Display</h3>
+              <img src="images/MemePopup.png" alt="Meme Display Example" />
+              <p>Enjoy funny memes that pop up during your work sessions</p>
+            </div>
+          </div>
+        </section>
+
+        <div class="install-section">
+          <h2>🚀 Installation</h2>
+          <h3>Install from Chrome Web Store (Recommended)</h3>
+          <a href="#" class="install-btn enabled">Chrome Web Store</a>
+
+          <div
+            class="warning"
+            style="
+              margin-top: 30px;
+              background: rgba(255, 255, 255, 0.1);
+              border-left-color: #ffc107;
+            "
+          >
+            <strong>Note:</strong> Please only install from the official Chrome
+            Web Store to ensure you get the authentic, secure version of the
+            extension.
+          </div>
+        </div>
+
+        <section class="section">
+          <h3>Local Installation (For Developers)</h3>
+          <div class="steps">
+            <ol>
+              <li>Download/clone this repository</li>
+              <li>Open <code>chrome://extensions/</code> in Chrome</li>
+              <li>Enable "Developer mode" (top-right toggle)</li>
+              <li>Click "Load unpacked" and select the extension folder</li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>🎮 How to Use</h2>
+          <div class="usage-tips">
+            <ol>
+              <li>
+                <strong>Click the extension icon</strong> in your Chrome toolbar
+              </li>
+              <li>
+                <strong>Choose your meme interval</strong> (15 min, 30 min, 1
+                hour, or 2 hours)
+              </li>
+              <li><strong>Toggle the switch</strong> to enable meme breaks</li>
+              <li>
+                <strong>Enjoy your memes!</strong> They'll pop up automatically
+                while you browse
+              </li>
+            </ol>
+
+            <h4 style="margin-top: 20px">When a meme appears:</h4>
+            <ul>
+              <li>It auto-closes after 30 seconds</li>
+              <li>Click the X to close early</li>
+              <li>Press Escape to dismiss</li>
+              <li>Enjoy the laugh! 😂</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>🙏 Credits</h2>
+          <div class="links">
+            <a
+              href="https://github.com/D3vd/Meme_Api"
+              target="_blank"
+              class="link-btn primary"
+              >Meme API by D3vd</a
+            >
+          </div>
+          <p>
+            Thanks to D3vd for the awesome meme API service that powers this
+            extension! 🎉
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>📄 License</h2>
+          <div class="links">
+            <a
+              href="https://github.com/mosroom/meme-break-extension/blob/main/LICENSE"
+              target="_blank"
+              class="link-btn"
+              >MIT License</a
+            >
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>🔒 Privacy</h2>
+          <div class="privacy-section">
+            <p><strong>This extension:</strong></p>
+            <ul>
+              <li>✅ Does NOT collect your personal data</li>
+              <li>✅ Only fetches memes from public APIs</li>
+              <li>✅ Stores settings locally in your browser</li>
+              <li>❌ No tracking, no ads, no nonsense</li>
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p>Built with ❤️ for productivity and fun!</p>
+      </footer>
+    </div>
+  </body>
+</html>
