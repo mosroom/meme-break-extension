@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Meme Break",
   "version": "1.0",
-  "description": "Meme Break helps you take short, fun breaks during work or study. It shows you fresh memes from popular subreddits at regular intervals (15 min, 30 min, 1 hr, 2 hrs) as small retro-style popups in your browser tabs. Easily toggle meme breaks on/off and customize the interval to fit your schedule. Stay productive while keeping your mood light and refreshed!",
+  "description": "Get fun meme popups at set intervals to take quick breaks while browsing. Stay entertained and refreshed!",
   "permissions": [
     "storage", 
     "activeTab", 
