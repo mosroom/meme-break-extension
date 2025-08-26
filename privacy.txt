@@ -1,0 +1,12 @@
+PRIVACY POLICY FOR MEME BREAK EXTENSION
+
+This extension does not collect any personal user data.
+
+Data stored locally on your device:
+- Meme break interval preference
+- Extension enabled/disabled state
+
+No data is transmitted to external servers or third parties.
+
+Contact: hardikmosroom@gmail.com
+Last updated: 26/08/2025
