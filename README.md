@@ -64,7 +64,7 @@ The extension respects user privacy by storing all settings locally and only fet
 
 ### Install from Chrome Web Store (Recommended)
 
-1. Visit the [Chrome Web Store](https://chrome.google.com/webstore) (link coming soon)
+1. Visit the [Chrome Web Store](https://chromewebstore.google.com/detail/meme-break/ifcpijehbbflahailmaebddhpcpkfcei)
 2. Click "Add to Chrome"
 3. Click "Add Extension" when prompted
 4. Pin the extension to your toolbar for easy access
